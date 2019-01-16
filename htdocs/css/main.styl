@@ -1,0 +1,457 @@
+@import "mixins.styl"
+@import "vars.styl"
+
+@font-face
+	font-family "Lobster"
+	src url("/font/Lobster.otf")
+
+.opacity-on
+	opacity 1
+
+.opacity-off
+	opacity 0
+
+.uppercase
+	text-transform uppercase
+
+.display-none
+	display none !important
+
+.float-left
+	float left !important
+
+.center
+	margin-left auto
+	margin-right auto
+	width 960px
+
+.inactive
+	background-color bg-inactive !important
+
+.separator
+	background url("/img/separator.png")
+	width 942px
+	height 20px
+	margin 10px auto
+
+.clear
+	float none !important
+	clear both
+
+.button
+	display inline-block
+	background bg-green
+	color #fff
+	border-radius 2px
+	font 20px/36px 'Lobster', cursive
+	text-align center
+	mix-user-select(none)
+	transition color speed-fast ease
+
+.link
+	border-radius 2px
+
+.link:hover
+	background-color bg-light-green
+	color bg-bright
+	cursor pointer
+
+a
+	color bg-green
+	text-decoration none
+	outline none
+
+a:hover
+	color bg-light-green
+
+.text
+	position relative
+	z-index 1
+
+.text:hover:before
+	content ""
+	z-index -1
+	border-radius 3px
+	position absolute
+	background-color #8da973
+	padding 2px 4px
+	left -2px
+	right -2px
+	top -2px
+	bottom -2px
+
+ul
+	list-style none
+	padding 0
+
+body
+	font 14px/18px Arial, Helvetica, sans-serif
+	color font-default
+	position relative
+	min-width 960px
+	background bg-default
+	margin 0
+	-webkit-transform translate3d(0,0,0)
+
+table
+	border-spacing 0
+
+h2
+	font-size 21px
+	margin 20px 0
+
+	h3
+		top -20px
+		position relative
+
+h3
+	font-size 14px
+	margin 0
+
+.tel
+	color bg-bright
+
+.tel:hover
+	color bg-bright
+
+.header
+	color bg-bright
+	position relative
+	height 10px
+
+	.wrapper
+		position absolute
+		right 0
+		margin 4px
+
+		.phone
+			position relative
+			top 1px
+			float left
+			width 16px
+			height 16px
+			background url("/img/phone.png")
+
+		> span
+			margin 0 8px
+
+.main
+	position relative
+	z-index 1
+	margin-top -1px
+	background bg-bright
+	padding-bottom 20px
+	border-bottom 1px solid #dddbdb
+	box-shadow 0 1px 5px #ccc
+
+	.container
+		height 74px
+
+		.logo
+			background url("/img/logo2.png")
+			margin-top 3px
+			float left
+			width 292px
+			height 85px
+			cursor pointer
+
+		ul
+			//margin-left 344px
+			margin-left 504px
+			padding-top 31px
+			font-size 18px
+			letter-spacing 3px
+
+			li
+				border-radius 8px
+				padding 9px 18px
+				position relative
+				display inline-block
+				cursor pointer
+
+				a
+					color font-default
+
+				a:hover
+					color font-bright
+
+			.selected
+				background-color bg-light-green
+				color font-bright
+
+.menu
+	li:hover
+		background-color bg-light-green
+		color font-bright
+
+		a
+			color font-bright !important
+
+.slider
+	position relative
+	width 100%
+	height 190px
+	background-color bg-bright
+	overflow hidden
+
+	img
+		position absolute
+		display block
+		margin-left auto
+		margin-right auto
+		left 0
+		right 0
+		mix-transition(speed-medium opacity)
+
+.content
+	position absolute
+	padding-top 18px
+	width 100%
+	background bg-bright
+
+	.info-left
+	.info-right
+		float left
+		width 418px
+
+	.info-left
+		padding-left 30px
+
+		img
+			float left
+
+	.info-right
+		padding-left 72px
+		li
+			background url("/img/marker.png") 0 8px no-repeat
+			padding-left 11px
+			color #464646
+			margin-bottom 5.5px
+
+.offers-wrapper
+	h2
+		margin 20px 30px
+
+	.prev
+	.next
+		position relative
+		margin 0 6px
+		float right
+		right 18px
+		top -46px
+		width 36px
+		height 30px
+		font 56px/18px 'Lobster', cursive
+
+	.next
+		right 24px
+
+	.wrapper
+		left 8px
+		overflow hidden
+		height 400px
+		position relative
+		top -40px
+		width 942px
+
+	.offers
+		position absolute
+		transition left speed-fast ease
+		left 0
+		width 4000px
+		height 400px
+
+	li
+		float left
+		width 236px
+		font-size 12px
+
+		.img-wrapper
+			box-shadow 2px 2px 3px #ddd
+			padding 4px 0 0 4px
+			background #fff
+			border 1px solid #e6e4e4
+			height 152px
+			margin 9px 7px
+
+			img
+				border 1px solid #e6e4e4
+
+		.text-wrapper
+			padding 0 10px
+			position relative
+
+			.description
+				height 142px
+				overflow hidden
+
+			.more
+				width 21px
+				height 13px
+				line-height 6px
+				position absolute
+				right 6px
+				bottom 49px
+				cursor default
+
+		.price
+			min-width 41px
+			height 38px
+			margin-top 10px
+			line-height 40px
+			padding 0 4px
+
+.social
+	.button
+		width 28px
+		height 28px
+		float left
+		margin 4px 4px 4px 0
+		background-repeat no-repeat
+
+	.name
+		font-size 16px
+		line-height 36px
+
+	.fb
+		background-image url("/img/fb.png")
+		background-position 12px 4px
+
+.newsletter
+	.info
+		width 382px
+
+	.wrapper
+		padding 16px 0
+
+	input
+		border 1px solid #d9d8d8
+		float left
+		color #a8a8a8
+		width 233px
+		height 30px
+		font 12px/18px  Arial, Helvetica, sans-serif
+		padding 6px 10px
+		box-sizing border-box
+
+	.button
+		height 30px
+		margin-left 10px
+		line-height 27px
+		font-size 20px
+		padding 0 6px
+
+.footer
+	width 100%
+	height 211px
+	color bg-bright
+	background-color bg-default
+	overflow hidden
+
+	.info-big
+		position absolute
+		margin 98px 0 0 10px
+
+	.info-small
+		position absolute
+		margin 72px 0 0 10px
+
+	.stores
+		height 100%
+		float right
+		top 11px
+		right -32px
+		position relative
+
+	.store
+		width 212px
+		float left
+		a
+			color bg-bright
+
+.logo-fleurop
+	width 250px
+	height 75px
+	background-image url("/img/fleurop_logo.gif")
+
+.shop-hours
+	float right
+	margin-left 9px
+
+.contact-number
+	float left
+	margin-left 9px
+
+.image-wrapper
+	width 400px
+	padding 6px 0px 2px 7px
+	background #fff
+	border 1px solid #e6e4e4
+	margin-bottom 8px
+	box-shadow 2px 2px 4px #ddd
+
+.tpl-stores
+	.map
+		background-image url("/img/germany.png")
+		width 320px
+		height 315px
+		margin-left 70px
+
+.tpl-impressum
+.tpl-privacy
+	margin-left 30px
+	margin-right 30px
+
+.tpl-contact
+	.image-wrapper
+		position relative
+		top 8px
+
+	.info-right
+		width 422px
+
+	h2
+		margin 10px 0 20px 0
+
+	.image-wrapper
+		padding 9px 0 7px 7px
+
+	.feedback
+		background-image url("/img/feedback.jpg")
+		width 392px
+		height 480px
+		background-position-x -30px
+
+	input
+	textarea
+		width 412px
+		font-family Arial, Helvetica, sans-serif
+		font-size 16px
+		color #5e5e5e
+		line-height 20px
+		border 1px solid #e6e4e4
+		padding 5px 14px
+		box-shadow 0 4px 3px #dedede
+		mix-box-sizing(border-box)
+		float left
+
+	input
+		height 30px
+
+	textarea
+		height 273px
+		overflow auto
+		border 1px solid #e6e4e4
+		position relative
+		resize none
+		margin 0
+
+	label
+		position relative
+		height 45px
+		float left
+
+	.button
+		position relative
+		top 242px
+		width 412px
